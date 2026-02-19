@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RebalancedReplimat</name>
+  <author>高耳鸡</author>
+  <packageId>ragnaroks.rebalancedreplimat</packageId>
+  <description>rebalance for sumghai.Replimat</description>
+  <modVersion>1.6.1</modVersion>
+  <supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+  <url>https://github.com/ragnaroks/RebalancedReplimat</url>
+  <loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.Rimworld.Ideology</li>
+		<li>Ludeon.Rimworld.Biotech</li>
+    <li>Ludeon.Rimworld.Anomaly</li>
+		<li>Ludeon.Rimworld.Odyssey</li>
+    <li>UnlimitedHugs.HugsLib</li>
+    <li>sumghai.Replimat</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+  </loadAfter>
+  <loadBefore>
+    <li>Owlchemist.CherryPicker</li>
+    <li>MalteSchulze.RIMMSqol</li>
+  </loadBefore>
+  <modDependencies>
+		<li>
+			<packageId>sumghai.Replimat</packageId>
+			<displayName>Replimat</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/1715402900</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+  <!-- <incompatibleWith>
+    <li>CETeam.CombatExtended</li>
+  </incompatibleWith> -->
+</ModMetaData>

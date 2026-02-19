@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 食品合成器（挂墙） -->
+<Patch>
+  <!-- 钢铁 = 160 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/Steel</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/Steel/text()</xpath>
+      <value>160</value>
+    </match>
+  </Operation>
+  <!-- 零部件 = 16 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/ComponentIndustrial</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/ComponentIndustrial/text()</xpath>
+      <value>160</value>
+    </match>
+  </Operation>
+  <!-- 高级零部件 = 4 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/ComponentSpacer</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/ComponentSpacer/text()</xpath>
+      <value>4</value>
+    </match>
+  </Operation>
+  <!-- 玻璃钢 = 40 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/Plasteel</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/Plasteel/text()</xpath>
+      <value>40</value>
+    </match>
+  </Operation>
+  <!-- 价值 = 7500 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/MarketValue</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/MarketValue/text()</xpath>
+      <value>7500</value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/MarketValueIgnoreHp</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/MarketValueIgnoreHp/text()</xpath>
+      <value>7500</value>
+    </match>
+  </Operation>
+  <!-- 工作量 = 3000 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/WorkToBuild</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/WorkToBuild/text()</xpath>
+      <value>3000</value>
+    </match>
+  </Operation>
+  <!-- 质量 = 5 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/Mass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/Mass/text()</xpath>
+      <value>5</value>
+    </match>
+  </Operation>
+  <!-- 不会短路 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/comps/li[@Class="CompProperties_Power"]/shortCircuitInRain</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/comps/li[@Class="CompProperties_Power"]/shortCircuitInRain/text()</xpath>
+      <value>false</value>
+    </match>
+  </Operation>
+  <!-- 功耗 = 100 -->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption/text()</xpath>
+      <value>100</value>
+    </match>
+  </Operation>
+</Patch>
