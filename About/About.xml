@@ -4,7 +4,7 @@
   <author>高耳鸡</author>
   <packageId>ragnaroks.rebalancedreplimat</packageId>
   <description>rebalance for sumghai.Replimat</description>
-  <modVersion>1.6.1</modVersion>
+  <modVersion>1.6.2</modVersion>
   <supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 食品合成器（挂墙） -->
 <Patch>
-  <!-- 钢铁 = 500 -->
+  <!-- 钢铁 = 750 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatFeedTankLarge"]/costList/Steel</xpath>
     <match Class="PatchOperationReplace">
@@ -33,12 +33,12 @@
       <value>false</value>
     </match>
   </Operation>
-  <!-- 功耗 = 500 -->
+  <!-- 功耗 = 750 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatFeedTankLarge"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="ReplimatFeedTankLarge"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption/text()</xpath>
-      <value>500</value>
+      <value>750</value>
     </match>
   </Operation>
 </Patch>

@@ -48,20 +48,6 @@
       <value>30</value>
     </match>
   </Operation>
-  <!-- 每单位存储堆叠 = 5 -->
-  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
-    <xpath>Defs/ThingDef[defName="ReplimatHopper"]/building/maxItemsInCell</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ThingDef[defName="ReplimatHopper"]/building/maxItemsInCell/text()</xpath>
-      <value>5</value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="ReplimatHopper"]/building</xpath>
-      <value>
-        <maxItemsInCell>5</maxItemsInCell>
-      </value>
-    </nomatch>
-  </Operation>
   <!-- 不会短路 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatHopper"]/comps/li[@Class="CompProperties_Power"]/shortCircuitInRain</xpath>

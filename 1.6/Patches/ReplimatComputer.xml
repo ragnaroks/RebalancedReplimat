@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 食品合成器（挂墙） -->
+<!-- 食品合成计算机 -->
 <Patch>
-  <!-- 钢铁 = 160 -->
+  <!-- 钢铁 = 100 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/Steel</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/Steel/text()</xpath>
-      <value>160</value>
+      <value>100</value>
     </match>
   </Operation>
-  <!-- 零部件 = 16 -->
+  <!-- 零部件 = 100 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/ComponentIndustrial</xpath>
     <match Class="PatchOperationReplace">
@@ -17,7 +17,7 @@
       <value>160</value>
     </match>
   </Operation>
-  <!-- 高级零部件 = 4 -->
+  <!-- 高级零部件 = 10 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/ComponentSpacer</xpath>
     <match Class="PatchOperationReplace">
@@ -25,7 +25,7 @@
       <value>4</value>
     </match>
   </Operation>
-  <!-- 玻璃钢 = 40 -->
+  <!-- 玻璃钢 = 100 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatComputer"]/costList/Plasteel</xpath>
     <match Class="PatchOperationReplace">
@@ -48,12 +48,12 @@
       <value>7500</value>
     </match>
   </Operation>
-  <!-- 工作量 = 3000 -->
+  <!-- 工作量 = 1000 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/WorkToBuild</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="ReplimatComputer"]/statBases/WorkToBuild/text()</xpath>
-      <value>3000</value>
+      <value>1000</value>
     </match>
   </Operation>
   <!-- 质量 = 5 -->
@@ -78,6 +78,17 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="ReplimatComputer"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption/text()</xpath>
       <value>100</value>
+    </match>
+  </Operation>
+
+  <!-- 添加复制产品，由于内部使用重量而不是营养值，MealNutrientPaste、MealSimple、MealFine 将不如 MealLavish-->
+  <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
+    <xpath>Defs/ThingDef[defName="ReplimatComputer"]/comps/li[@Class="Replimat.CompProperties_ReplimatRestrictions"]/batchReplicableSurvivalMeals</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="ReplimatComputer"]/comps/li[@Class="Replimat.CompProperties_ReplimatRestrictions"]/batchReplicableSurvivalMeals</xpath>
+      <value>
+        <li>MealLavish</li>
+      </value>
     </match>
   </Operation>
 </Patch>

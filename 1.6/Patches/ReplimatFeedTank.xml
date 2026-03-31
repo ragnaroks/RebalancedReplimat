@@ -33,12 +33,12 @@
       <value>false</value>
     </match>
   </Operation>
-  <!-- 功耗 = 200 -->
+  <!-- 功耗 = 250 -->
   <Operation Class="PatchOperationConditional" MayRequire="sumghai.Replimat">
     <xpath>Defs/ThingDef[defName="ReplimatFeedTank"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="ReplimatFeedTank"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption/text()</xpath>
-      <value>200</value>
+      <value>250</value>
     </match>
   </Operation>
 </Patch>
